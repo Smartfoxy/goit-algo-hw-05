@@ -122,28 +122,6 @@ existed_sub_str_2 = "максимальна кількість"
 
 not_existed_sub_str = "Спробуй знайти це"
 
-t1 = kmp_search(art_1, existed_sub_str_1)
-t2 = boyer_moore_search(art_1, existed_sub_str_1)
-t3 = rabin_karp_search(art_1, existed_sub_str_1)
-
-t4 = kmp_search(art_1, not_existed_sub_str)
-t5 = boyer_moore_search(art_1, not_existed_sub_str)
-t6 = rabin_karp_search(art_1, not_existed_sub_str)
-
-print(f't1 - {t1} | t2 - {t2} | t3 - {t3}')
-print(f't1 - {t4} | t2 - {t5} | t6 - {t6}')
-
-t_2_1 = kmp_search(art_2, existed_sub_str_2)
-t_2_2 = boyer_moore_search(art_2, existed_sub_str_2)
-t_2_3 = rabin_karp_search(art_2, existed_sub_str_2)
-
-t_2_4 = kmp_search(art_2, not_existed_sub_str)
-t_2_5 = boyer_moore_search(art_2, not_existed_sub_str)
-t_2_6 = rabin_karp_search(art_2, not_existed_sub_str)
-
-print(f't_2_1 - {t_2_1} | t_2_2 - {t_2_2} | t_2_3 - {t_2_3}')
-print(f't_2_1 - {t_2_4} | t_2_2 - {t_2_5} | t_2_6 - {t_2_6}')
-
 kmp_t_1  = timeit.timeit(lambda: kmp_search(art_1, existed_sub_str_1), number=1)
 bm_t_1  = timeit.timeit(lambda: boyer_moore_search(art_1, existed_sub_str_1), number=1)
 rk_t_1  = timeit.timeit(lambda: rabin_karp_search(art_1, existed_sub_str_1), number=1)
